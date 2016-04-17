@@ -1,0 +1,12 @@
+This script takes in a .gif file, cuts it into different pieces and then turns each piece into a spritesheet rather than a gif.
+
+Usage:
+ssmake filename numpieceshorizontal numpiecesvertical
+
+Example:
+ssmake examples/input/test.gif 13 10
+
+Test:
+npm test
+
+Note: Code sucks, need to refactor and use promises.
