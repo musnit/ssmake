@@ -4,8 +4,19 @@
   "description": "split a gif into tiles and turn each tile gif into a spritesheet jpg",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node index.js examples/input/test.gif 13 10",
+    "start": "node index.js"
+  },
+  "bin": {
+    "ssmake": "./index.js"
   },
   "author": "Aidan Musnitzky",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gm": "^1.22.0",
+    "mkdirp": "^0.5.1",
+    "mv": "^2.1.1",
+    "pryjs": "^0.1.3",
+    "rimraf": "^2.5.2"
+  }
 }
