@@ -81,12 +81,17 @@ rimraf('tmp', () => {
                                         console.log('All sprites created! Creating manifest!');
                                         const spriteFiles = fs.readdirSync('tmp/sprites');
                                         let spritesManifested = 0;
-                                        let spritesManifest = {};
+                                        let spritesManifest = {
+                                          sprites: {},
+                                          horizontalPieces: horizontalPieces,
+                                          verticalPieces: verticalPieces,
+                                          numFrames: numFrames
+                                        };
                                         spriteFiles.forEach((spriteFile) => {
                                           gm(`tmp/sprites/${spriteFile}`)
                                           .size(function (err, size) {
                                             spritesManifested++;
-                                            spritesManifest[`${spriteFile}`] = [size.width/numFrames, size.height];
+                                            spritesManifest.sprites[`${spriteFile}`] = [size.width/numFrames, size.height];
                                             if (spritesManifested === numPieces) {
                                               fs.writeFile("tmp/manifest.json", JSON.stringify(spritesManifest), function(err) {
                                                   if(err) {
