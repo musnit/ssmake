@@ -1,0 +1,11 @@
+{
+  "name": "ssmaker",
+  "version": "1.0.0",
+  "description": "split a gif into tiles and turn each tile gif into a spritesheet jpg",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aidan Musnitzky",
+  "license": "MIT"
+}
